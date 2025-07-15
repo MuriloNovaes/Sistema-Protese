@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatil Studio | Relatórios</title>
+    <link rel="stylesheet" href="css/relatorios.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="report-container">
+        <div class="report-header">
+            <h1 class="report-title">
+                <span class="material-icons">analytics</span>
+                Relatórios
+            </h1>
+            <div class="action-buttons">
+                <button class="btn btn-secondary">
+                    <span class="material-icons">file_download</span>
+                    Exportar
+                </button>
+                <button class="btn btn-primary" id="refresh-btn">
+                    <span class="material-icons">refresh</span>
+                    Atualizar
+                </button>
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filter-bar">
+            <div class="filter-group">
+                <label class="filter-label">Período</label>
+                <select class="filter-select" id="period-filter">
+                    <option>Hoje</option>
+                    <option selected>Últimos 7 dias</option>
+                    <option>Este mês</option>
+                    <option>Este trimestre</option>
+                    <option>Personalizado</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label class="filter-label">Tipo de Serviço</label>
+                <select class="filter-select" id="service-filter">
+                    <option>Todos os serviços</option>
+                    <option>Coroa Dentária</option>
+                    <option>Ponte Fixa</option>
+                    <option>Prótese Total</option>
+                    <option>Facetas</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label class="filter-label">Dentista</label>
+                <select class="filter-select" id="dentist-filter">
+                    <option>Todos os dentistas</option>
+                    <option>Dr. João Silva</option>
+                    <option>Dra. Ana Souza</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Cards de Resumo -->
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="card-title">
+                    <span class="material-icons">payments</span>
+                    Faturamento
+                </div>
+                <div class="card-value">R$ 12.450,00</div>
+                <div class="card-change positive">
+                    <span class="material-icons">trending_up</span>
+                    +12% em relação ao período anterior
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-title">
+                    <span class="material-icons">check_circle</span>
+                    Serviços Entregues
+                </div>
+                <div class="card-value">42</div>
+                <div class="card-change positive">
+                    <span class="material-icons">trending_up</span>
+                    +8% em relação ao período anterior
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráficos -->
+        <div class="charts-container">
+            <!-- Gráfico de Faturamento -->
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">Faturamento Mensal</h3>
+                    <div class="chart-actions">
+                        <button class="btn btn-icon" id="bar-chart-btn" title="Visualização em Barras">
+                            <span class="material-icons">bar_chart</span>
+                        </button>
+                        <button class="btn btn-icon" id="line-chart-btn" title="Visualização em Linhas">
+                            <span class="material-icons">show_chart</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Gráfico de Serviços -->
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">Serviços Entregues por Tipo</h3>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="servicesChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão Voltar -->
+        <div class="back-button-container">
+            <a href="dashboard.html" class="back-button">
+                <span class="material-icons">arrow_back</span>
+                Voltar ao Dashboard
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/relatorios.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Dentistas | Versatil Studio</title>
+    <link rel="stylesheet" href="css/cadastro_dentista.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-header">
+            <div class="logo">🦷 Versatil Studio</div>
+            <h1>Cadastrar Dentista</h1>
+        </div>
+        
+        <form id="dentistForm" class="dentist-form">
+            <div class="input-group">
+                <label for="dentistName">Nome do Dentista*</label>
+                <input 
+                    type="text" 
+                    id="dentistName" 
+                    placeholder="Dr. João Silva"
+                    required
+                >
+                <span class="input-icon">👨‍⚕️</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="clinicName">Nome da Clínica*</label>
+                <input 
+                    type="text" 
+                    id="clinicName" 
+                    placeholder="Sorriso Perfeito Odontologia"
+                    required
+                >
+                <span class="input-icon">🏥</span>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                <span class="btn-icon">✓</span>
+                Cadastrar Dentista
+            </button>
+        </form>
+        
+        <div class="back-link">
+            <a href="dashboard.html">← Voltar ao Dashboard</a>
+        </div>
+    </div>
+    
+    <script src="js/cadastro_dentista.js"></script>
+    <script src="js/auth-guard.js"></script>
+</body>
+</html>

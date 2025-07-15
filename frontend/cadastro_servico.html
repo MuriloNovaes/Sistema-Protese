@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatil Studio | Cadastro de Serviços</title>
+    <link rel="stylesheet" href="css/cadastro_servicos.css"> <!-- CSS específico -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="form-container">
+        <div class="form-header">
+            <div class="logo">Versatil Studio</div>
+            <h1>Cadastro de Serviços</h1>
+            <p class="subtitle">Prótese Dentária</p>
+        </div>
+
+        <form class="service-form" id="service-form">
+            <!-- Dentista -->
+            <div class="input-group">
+                <label for="dentist">Nome do Dentista*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">person</span>
+                    <select id="dentist" class="form-input" required>
+                        <option value="" disabled selected>Selecione o dentista</option>
+                        <option>Dr. João Silva</option>
+                        <option>Dra. Ana Souza</option>
+                        <option>Dr. Carlos Oliveira</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Clínica -->
+            <div class="input-group">
+                <label for="clinic">Clínica*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">business</span>
+                    <select id="clinic" class="form-input" required>
+                        <option value="" disabled selected>Selecione a clínica</option>
+                        <option>Clínica Sorriso Perfeito</option>
+                        <option>Dental Center</option>
+                        <option>Odonto Excellence</option>
+                        <option>Clínica Bem Estar</option>
+                        <option>Smile Care</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Paciente -->
+            <div class="input-group">
+                <label for="patient">Paciente*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">accessibility</span>
+                    <input type="text" id="patient" class="form-input" placeholder="Nome completo do paciente" required>
+                </div>
+            </div>
+
+            <!-- Serviço -->
+            <div class="input-group">
+                <label for="service">Serviço*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">work</span>
+                    <select id="service" class="form-input" required>
+                        <option value="" disabled selected>Selecione o serviço</option>
+                        <option>Coroa em Zircônia</option>
+                        <option>Faceta em Cerâmica</option>
+                        <option>Prótese Total</option>
+                        <option>Prótese Parcial</option>
+                        <option>Onlay/Inlay</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Lista de Preços -->
+            <div class="input-group">
+                <label for="price-list">Lista de Preços*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">list_alt</span>
+                    <select id="price-list" class="form-input" required>
+                    <option value="" disabled selected>Selecione a lista</option>
+                    <option value="1">Lista Padrão</option>
+                    <option value="2">Lista Especial</option>
+                    </select>
+                </div>
+            </div>
+
+<!-- Preço (mantido, mas agora será atualizado dinamicamente) -->
+<div class="input-group">
+    <label for="price">Preço (R$)*</label>
+    <div class="input-with-icon">
+        <span class="material-icons input-icon">attach_money</span>
+        <input type="text" id="price" class="form-input" placeholder="0,00" readonly required>
+    </div>
+</div>
+
+
+            <!-- Preço -->
+            <div class="input-group">
+                <label for="price">Preço (R$)*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">attach_money</span>
+                    <input type="text" id="price" class="form-input" placeholder="0,00" readonly required>
+                </div>
+            </div>
+
+            <!-- Cor e Número do Dente -->
+            <div class="dual-input-group">
+                <div class="input-group half-width">
+                    <label for="tooth-color">Cor do Dente*</label>
+                    <div class="input-with-icon">
+                        <span class="material-icons input-icon">palette</span>
+                        <select id="tooth-color" class="form-input" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option>A1</option>
+                            <option>A2</option>
+                            <option>A3</option>
+                            <option>A3.5</option>
+                            <option>A4</option>
+                            <option>B1</option>
+                            <option>B2</option>
+                            <option>B3</option>
+                            <option>B4</option>
+                            <option>C1</option>
+                            <option>C2</option>
+                            <option>C3</option>
+                            <option>C4</option>
+                            <option>D2</option>
+                            <option>D3</option>
+                            <option>D4</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-group half-width">
+                    <label for="tooth-number">Número do Dente*</label>
+                    <div class="input-with-icon">
+                        <span class="material-icons input-icon">tag</span>
+                        <input type="number" id="tooth-number" class="form-input" placeholder="Ex: 11" min="1" max="48" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quantidade -->
+            <div class="input-group">
+                <label for="quantity">Quantidade*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">format_list_numbered</span>
+                    <input type="number" id="quantity" class="form-input" placeholder="Ex: 1" min="1" required>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="receipt-date">Data de Entrada*</label>
+                <div class="input-with-icon">
+                    <span class="material-icons input-icon">event</span>
+                  <input type="date" id="receipt-date" class="form-input" required>
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">
+                    <span class="material-icons">save</span>
+                    Cadastrar Serviço
+                </button>
+                
+                <a href="dashboard.html" class="back-button">
+                    <span class="material-icons">arrow_back</span>
+                    Voltar ao Dashboard
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/cadastro_servicos.js"></script>
+</body>
+</html>

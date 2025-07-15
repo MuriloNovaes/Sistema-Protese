@@ -1,0 +1,486 @@
+/* lista_servicos.css - Mantendo o mesmo tema da tela de cadastro */
+:root {
+    --bg: #0f172a;
+    --card-bg: rgba(15, 23, 42, 0.95);
+    --border: rgba(56, 189, 248, 0.2);
+    --primary: #38bdf8;
+    --primary-hover: #0ea5e9;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --text: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos base - idênticos à tela de cadastro */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: var(--text);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    border: 1px solid var(--border);
+    animation: fadeIn 0.5s ease;
+}
+
+/* Cabeçalho - estilo idêntico ao cadastro */
+.services-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Barra de busca - mantendo o estilo dos inputs do cadastro */
+.search-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.search-box .material-icons {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+}
+
+/* Filtros - estilo consistente com o tema */
+.filters-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.filter-group select {
+    padding: 10px 15px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 14px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%2338bdf8'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    padding-right: 35px;
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-range input {
+    padding: 10px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* Lista de serviços - estilo alinhado ao tema */
+.services-list {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.list-header {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 1fr 100px 120px 100px 120px;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.list-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.service-item {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 1fr 100px 120px 100px 120px;
+    padding: 14px 16px;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s ease;
+}
+
+.service-item:hover {
+    background: rgba(56, 189, 248, 0.05);
+}
+
+/* Status badges - estilo consistente */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    width: fit-content;
+}
+
+.status-pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status-completed {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-delivered {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Botões - mesmo estilo da tela de cadastro */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.view-btn {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+}
+
+.view-btn:hover {
+    background: rgba(56, 189, 248, 0.2);
+}
+
+.edit-btn {
+    background: rgba(234, 179, 8, 0.1);
+    color: #eab308;
+}
+
+.edit-btn:hover {
+    background: rgba(234, 179, 8, 0.2);
+}
+
+/* Modal - estilo consistente com o tema */
+.service-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.detail-label {
+    width: 150px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.detail-value {
+    flex: 1;
+    font-size: 14px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid var(--border);
+}
+
+.modal-footer button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-secondary {
+    background: rgba(148, 163, 184, 0.1);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background: rgba(148, 163, 184, 0.2);
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.btn-success:hover {
+    background: #0d9c6e;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade - adaptado do cadastro */
+@media (max-width: 1024px) {
+    .list-header, .service-item {
+        grid-template-columns: 50px 1fr 1fr 1fr 80px 120px 100px;
+    }
+    
+    .action-buttons {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        padding: 15px;
+    }
+    
+    .list-header {
+        display: none;
+    }
+    
+    .service-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 15px;
+    }
+    
+    .mobile-label {
+        font-size: 12px;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 4px;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .filters-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer button {
+        width: 100%;
+    }
+}
+/* Adicione estas regras ao seu CSS existente */
+
+/* Ajuste no grid do cabeçalho e itens */
+.list-header, .service-item {
+    grid-template-columns: 60px 1fr 1fr 1fr 100px 80px 80px 80px 120px 120px;
+}
+
+/* Estilo para a data de entrega */
+.delivery-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Modal de entrega */
+.delivery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.delivery-modal .modal-content {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .list-header {
+        display: none;
+    }
+    
+    .service-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 15px;
+    }
+    
+    .mobile-label {
+        font-size: 12px;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 4px;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+.delivery-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Laboratório de Prótese Dentária</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Versatil Studio" class="logo-img">
+                <span>Versatil Studio</span>
+            </div>
+            <div class="user-info">
+                <span>Bem-vindo, Administrador</span>
+                <div class="user-avatar">A</div>
+                <button class="logout-btn">Sair</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav-menu">
+            <div class="nav-buttons">
+                <button class="nav-btn active">Dashboard</button>
+                <button class="nav-btn">Cadastro de dentista</button>   
+                <button class="nav-btn">Cadastro de Serviços</button>
+                <button class="nav-btn">Lista de Serviços</button>
+                <button class="nav-btn">Relatórios</button>
+            </div>
+        </nav>
+
+        <!-- Statistics Cards - Agora com apenas 3 cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon services"></div>
+                <div class="stat-number">35</div>
+                <div class="stat-label">Serviços Este Mês</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon revenue"></div>
+                <div class="stat-number">R$ 15.250</div>
+                <div class="stat-label">Faturamento Mensal</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon pending"></div>
+                <div class="stat-number">8</div>
+                <div class="stat-label">Serviços Pendentes</div>
+            </div>
+        </div>
+
+        <!-- Content Row -->
+        <div class="content-row">
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <div class="section-title">Atividades Recentes</div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon completed"></div>
+                    <div class="activity-content">
+                        <div class="activity-title">Coroa de Porcelana finalizada</div>
+                        <div class="activity-time">Há 2 horas - Dr. Silva</div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon new"></div>
+                    <div class="activity-content">
+                        <div class="activity-title">Novo serviço cadastrado</div>
+                        <div class="activity-time">Há 4 horas - Dra. Santos</div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon warning"></div>
+                    <div class="activity-content">
+                        <div class="activity-title">Prazo próximo do vencimento</div>
+                        <div class="activity-time">Há 6 horas - Implante Dr. Costa</div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon user"></div>
+                    <div class="activity-content">
+                        <div class="activity-title">Novo dentista cadastrado</div>
+                        <div class="activity-time">Há 1 dia - Dr. Oliveira</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions-container">
+                <div class="section-title">Ações Rápidas</div>
+                <div class="quick-actions">
+                    <div class="action-card">
+                        <div class="action-icon new-service"></div>
+                        <div class="action-title">Novo Serviço</div>
+                        <div class="action-description">Cadastrar um novo serviço</div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon new-dentist"></div>
+                        <div class="action-title">Novo Dentista</div>
+                        <div class="action-description">Cadastrar um novo dentista</div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon reports"></div>
+                        <div class="action-title">Ver Relatórios</div>
+                        <div class="action-description">Acessar relatórios mensais</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
